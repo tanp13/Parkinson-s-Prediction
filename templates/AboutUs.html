@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SymptomScan</title>
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="AboutUs.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='AboutUs.css') }}">
+</head>
+<body>
+
+    <!-- <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Sympton_Scan_logo.png" alt="Symptom Scan Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button id="toggle-theme">Dark Mode</button>
+    </header> -->
+    
+    <header>
+        <div class="container_1">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Sympton_Scan_logo.png') }}" alt="SymptomScan Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Our Mission</h2>
+            <div class="mission-container">
+                <div class="mission-content">
+                    <h3>1. Objective 🎯</h3>
+                    <p>To revolutionize early detection of Parkinson’s Disease (PD) through cutting-edge machine learning technologies, offering a chance for timely intervention and improved quality of life.</p>
+                    
+                    <h3>2. Technology & Methodology 💡</h3>
+                    <p><strong>Machine Learning:</strong> Harnessing advanced algorithms to uncover subtle patterns that signal the early onset of PD.</p>
+                    <p><strong>Data Sources:</strong> Integrating diverse data streams like health records, voice samples, and physical assessments.</p>
+                    <p><strong>Feature Extraction:</strong> Applying state-of-the-art techniques to highlight critical insights from raw data.</p>
+        
+                    <h3>3. Initial Focus 🔍</h3>
+                    <p>Building a foundation in Parkinson’s detection, using it as a springboard to develop a broader understanding of early diagnosis in neurodegenerative conditions.</p>
+        
+                    <h3>4. Future Expansion 🚀</h3>
+                    <p>Envisioning a scalable platform that extends beyond PD to encompass other neurodegenerative diseases.</p>
+        
+                    <h3>5. Potential Features 🌟</h3>
+                    <p><strong>Voice Analysis:</strong> Identifying subtle changes in speech patterns that could serve as early indicators of PD.</p>
+                    <p><strong>Physical Symptom Tracking:</strong> Monitoring motor symptoms through cutting-edge assessments.</p>
+                    <p><strong>Holistic Medical History:</strong> Factoring in patient demographics and previous medical conditions.</p>
+        
+                    <h3>6. Impact 🌍</h3>
+                    <p>Empowering patients and healthcare providers with early insights for personalized care.</p>
+                    <p>Contributing to neurology research, aiding understanding of PD’s early symptoms.</p>
+        
+                    <h3>7. Collaboration & Team 🤝</h3>
+                    <p>A multidisciplinary team of Machine Learning enthusiasts, Data Science enthusiasts, and Software Engineers working together.</p>
+                </div>
+            </div>
+        </section>        
+        
+        <section>
+            <h2>Project Guide</h2>
+            <div class="guide">
+                <div class="member">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='images/Dhanashree_maam_pic.png') }}" alt="Project Guide">
+                    </div>
+                    <h3>Dr Dhanashree Toradmalle</h3>
+                    <div class="contact-info">
+                        <a href="https://www.linkedin.com/in/drdhanashreetoradmalle/" class="icon-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:guide.email@email.com" class="icon-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <p>With over 20 years of experience, our guide has authored books on Computer Networks and Intellectual Property Rights for Wiley Publications. As a mentor for hackathons, her social project, Rotibank, won the Best Social Impact Project at the CSI-TechNext Awards 2019, and she actively contributes to curriculum design at Mumbai University.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Our Workforce</h2>
+            <div class="team">
+                <!-- Team Member 1 -->
+                <div class="member">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='images/Soham.jpeg') }}" alt="Soham Pingale">
+                    </div>
+                    <h3>Soham Pingale</h3>
+                    <div class="contact-info">
+                        <a href="https://www.linkedin.com/in/soham-pingale-9232a2258/" class="icon-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:soham.pingale@somaiya.edu" class="icon-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <p>
+                        Passionate about Machine Learning, Data Analysis, and Python Development, with a dedicated focus on advancing skills in AI and data-driven problem-solving
+                    </p>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="member">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='images/Saksham_Pic.jpg')}}" alt="Saksham Sapru">
+                    </div>
+                    <h3>Saksham Sapru</h3>
+                    <div class="contact-info">
+                        <a href="https://www.linkedin.com/in/saksham-sapru-ab6924269/" class="icon-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:saksham.sapru@somaiya.edu" class="icon-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <p>As a web developer with a strong foundation in Python, I bring a blend of frontend and backend expertise to create dynamic, efficient, and user-friendly web applications..</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="member">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='images/Urja_image.jpeg')}}" alt="Urja Patel">
+                    </div>
+                    <h3>Urja Patel</h3>
+                    <div class="contact-info">
+                        <a href="https://www.linkedin.com/in/urja-patel-5b04432a3/" class="icon-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:urja.patel@somaiya.edu" class="icon-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <p>Skilled front-end developer and software engineer with a strong enthusiasm for data science and analytical methodologies, committed to delivering innovative and data-driven solutions.</p>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="member">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='images/Tanisha_image.jpg')}}" alt="Tanisha Patel">
+                    </div>
+                    <h3>Tanisha Patel</h3>
+                    <div class="contact-info">
+                        <a href="https://www.linkedin.com/in/tanisha-patel-13218425b/" class="icon-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:patel.th@somaiya.edu" class="icon-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <p>Database backend expert with a creative touch in website design. Enthusiast in data analysis and visualization, turning data into impactful insights and seamless user experiences..</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- <footer>
+        <p>&copy; 2024 SymptomScan. All Rights Reserved.</p>
+    </footer> -->
+
+</body>
+</html>

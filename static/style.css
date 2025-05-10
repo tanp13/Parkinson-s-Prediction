@@ -1,0 +1,155 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e7f1f9; /* Light blue background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f1f8ff; /* Very light blue header background */
+  padding: 15px 0;
+  border-bottom: 1px solid #cce7ff; /* Soft blue border */
+}
+
+.container_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #007BFF; /* Light blue navigation links */
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Hero Section Styling */
+.hero {
+  background-image: url('Background.png'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Services Overview Section */
+.services-overview {
+  padding: 50px 20px;
+  background-color: #f4f9ff;
+  text-align: center;
+}
+
+.services-overview h2 {
+  color: #007BFF;
+  margin-bottom: 40px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.service-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.service-box h3 {
+  color: #0056b3;
+  margin-bottom: 15px;
+}
+
+.service-box p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.btn-secondary {
+  background-color: #f4f9ff;
+  color: #007BFF;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #cce7ff;
+}
+
+/* Call to Action Section */
+.cta {
+  background-color: #e7f1f9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #f1f8ff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  color: #666;
+}

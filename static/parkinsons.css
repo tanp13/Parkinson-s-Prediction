@@ -1,0 +1,146 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e7f1f9; /* Light blue background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #f1f8ff; /* Very light blue header background */
+    padding: 15px 0;
+    border-bottom: 1px solid #cce7ff; /* Soft blue border */
+  }
+  
+  .container_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .logo img {
+    height: 60px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #007BFF; /* Light blue navigation links */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #0056b3; /* Darker blue on hover */
+  }
+
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e7f1f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f1f8ff;
+    padding: 15px 0;
+    border-bottom: 1px solid #cce7ff;
+}
+
+.container_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.intro, .prediction-form, .result {
+    margin-bottom: 40px;
+}
+
+h1, h2 {
+    color: #007BFF;
+}
+
+p, label {
+    font-size: 16px;
+}
+
+input[type="number"], input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+button.submit-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #f1f8ff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #cce7ff;
+}

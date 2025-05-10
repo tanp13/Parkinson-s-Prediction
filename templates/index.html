@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SymptomScan - Spot the Signs, Stay Ahead with AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container_1">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Sympton_Scan_logo.png') }}" alt="SymptomScan Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <style>
+                .hero {
+                    background-image: url("{{ url_for('static', filename='images/Background.png') }}");
+                    background-size: cover;
+                    background-position: center;
+                    padding: 100px 20px;
+                    text-align: center;
+                    color: #2355AF;
+                }
+                </style>
+            <!-- <img src="{{ url_for('static', filename='images/Background.png') }}" alt="Background Image"> -->
+            <div class="hero-content">
+                <h1>ChinhAI</h1>
+                <p>Spot the Signs. Stay Ahead with AI. Your health is our priority.</p>
+                <a href="{{ url_for('services') }}" class="btn-primary">Explore Our Services</a>
+            </div>
+        </section>
+
+        <section class="services-overview">
+            <h2>Our Specialities</h2>
+            <div class="services-container">
+                <div class="service-box">
+                    <h3>Heart Disease Detection</h3>
+                    <p>Our advanced machine learning tools offer precise predictions and early detection to manage symptoms effectively.</p>
+                    <a href="{{ url_for('heart') }}" class="btn-secondary">Learn More</a>
+                </div>
+                <div class="service-box">
+                    <h3>Future Disease Prediction</h3>
+                    <p>We aim to expand into other diseases for early and accurate diagnostics to ensure the best care for all.</p>
+                    <a href="{{ url_for('future') }}" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Get Started with ChinhAI</h2>
+            <p>Choose a service to diagnose, monitor, and manage your health with cutting-edge AI and ML technology.</p>
+            <a href="{{ url_for('about') }}" class="btn-primary">Contact Us</a>
+        </section>
+    </main>
+
+    <!-- <footer>
+        <p>&copy; 2024 SymptomScan. All Rights Reserved.</p>
+    </footer> -->
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SymptomScan - Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Services.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container_1">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Sympton_Scan_logo.png') }}" alt="SymptomScan Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Disease Options Section -->
+    <section class="disease-section">
+        <div class="disease-grid">
+            <a href="{{ url_for('parkinsons') }}" class="disease-item">
+                <h2 class="disease-title">Parkinson's Disease</h2>
+                <img src="{{ url_for('static', filename='images/Parkinsons_Disease.png') }}" alt="Parkinson's Disease Image" class="disease-image">
+                <p class="disease-description">Select this option to test for Parkinson's Disease and explore possible treatments.</p>
+            </a>
+            <a href="{{ url_for('diabetes') }}" class="disease-item">
+                <h2 class="disease-title">Diabetes</h2>
+                <img src="{{ url_for('static', filename='images/Diabetes.png') }}" alt="Diabetes Image" class="disease-image">
+                <p class="disease-description">Check for Diabetes with this option and manage your blood sugar levels.</p>
+            </a>
+            <a href="{{ url_for('heart') }}" class="disease-item">
+                <h2 class="disease-title">Heart Disease</h2>
+                <img src="{{ url_for('static', filename='images/Heart_Disease.png') }}" alt="Heart Disease Image" class="disease-image">
+                <p class="disease-description">Test for Heart Disease and explore your cardiovascular health.</p>
+            </a>
+            <a href="{{ url_for('future') }}" class="disease-item">
+                <h2 class="disease-title">Coming Soon</h2>
+                <img src="{{ url_for('static', filename='images/Comming_soon.png') }}" alt="Coming Soon Image" class="disease-image">
+                <p class="disease-description">Stay Tuned – New Symptom Checkers and Health Resources Coming Soon!</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- <footer>
+        <p>&copy; 2024 SymptomScan. All Rights Reserved.</p>
+    </footer> -->
+</body>
+</html>

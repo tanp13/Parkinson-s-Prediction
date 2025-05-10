@@ -1,0 +1,202 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e7f1f9; /* Light blue background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+/* Dark mode toggle button */
+#toggle-theme {
+    background-color: #ffffff;
+    color: #007BFF; /* Light blue button text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-theme:hover {
+    background-color: #dddddd;
+}
+
+/* Dark mode styling */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .member {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .image-container {
+    border-color: #ffffff;
+}
+
+body.dark-mode h2 {
+    border-color: #ffffff;
+}
+
+/* Other sections and member styles */
+section {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #007BFF; /* Light blue heading */
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007BFF; /* Light blue border */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.guide {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.member {
+    background-color: #ffffff; /* White background for member cards */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+}
+
+.member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border: 2px solid #007BFF; /* Light blue border */
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.icon-link {
+    margin: 0 5px;
+    color: #007BFF; /* Light blue links */
+    text-decoration: none;
+}
+
+.icon-link:hover {
+    color: #0056b3; /* Slightly darker blue on hover */
+}
+
+/* Collapsible sections in the mission */
+.mission-content h3 {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.mission-content h3.active {
+    color: #3498db;
+}
+
+/* Header styling */
+header {
+    background-color: #f1f8ff; /* Very light blue header background */
+    padding: 15px 0;
+    border-bottom: 1px solid #cce7ff; /* Soft blue border */
+}
+
+.container_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF; /* Light blue nav links */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f1f8ff;
+    color: #004080;
+    font-size: 14px;
+}

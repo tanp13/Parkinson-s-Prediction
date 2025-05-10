@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='parkinsons.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container_1">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Sympton_Scan_logo.png') }}" alt="SymptomScan Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Parkinson's Disease Prediction</h1>
+            <p>Early detection of Parkinson's Disease is crucial for managing the condition. Use our ML model to evaluate your likelihood of having Parkinson's based on vocal patterns or other test inputs.</p>
+        </section>
+
+        <section class="prediction-form">
+            <h2>Submit Your Details</h2>
+            <form id="parkinson-form" method="POST" action="/predict" enctype="multipart/form-data">
+                <label for="voice-sample">Upload Voice Sample (Optional)</label>
+                <input type="file" id="voice-sample" name="voice-sample" accept=".wav, .mp3">
+
+                <h3>Or Record Your Voice:</h3>
+                <button type="button" id="record-btn" onclick="startRecording()">🎤 Start Recording</button>
+                <button type="button" id="stop-btn" onclick="stopRecording()" disabled>⏹️ Stop Recording</button>
+                <p id="recording-status">Press the microphone icon to start recording.</p>
+
+                <audio id="audio-playback" controls hidden></audio>
+
+                <input type="hidden" id="jitter" name="jitter" required>
+                <input type="hidden" id="shimmer" name="shimmer" required>
+                <input type="hidden" id="nhr" name="nhr" required>
+
+                <button type="submit" class="submit-btn">Get Prediction</button>
+            </form>
+        </section>
+
+        <section class="result" id="result-section">
+            <h2>Your Prediction</h2>
+            <p id="result-message">Submit your voice data to get the prediction.</p>
+        </section>
+    </main>
+
+    <script>
+        let mediaRecorder;
+        let audioChunks = [];
+    
+        function startRecording() {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    mediaRecorder = new MediaRecorder(stream);
+                    mediaRecorder.start();
+                    audioChunks = [];
+    
+                    mediaRecorder.ondataavailable = event => {
+                        audioChunks.push(event.data);
+                    };
+    
+                    mediaRecorder.onstop = () => {
+                        const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                        const audioUrl = URL.createObjectURL(audioBlob);
+                        const audioPlayback = document.getElementById('audio-playback');
+                        audioPlayback.src = audioUrl;
+                        audioPlayback.hidden = false;
+                        audioPlayback.load();
+    
+                        console.log("Recorded audio blob:", audioBlob);
+    
+                        // Prepare the form data
+                        const formData = new FormData(document.getElementById('parkinson-form'));
+                        formData.append('voice-sample', audioBlob, 'recording.wav');
+    
+                        // Send the form data to the server for prediction
+                        fetch('/predict', {
+                            method: 'POST',
+                            body: formData,
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            document.getElementById('result-message').innerText = `Prediction: ${data.result}`;
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            document.getElementById('result-message').innerText = 'Error occurred while predicting.';
+                        });
+    
+                        document.getElementById('recording-status').innerText = "Recording complete. Prediction in progress...";
+                    };
+    
+                    document.getElementById('recording-status').innerText = "Recording... please speak.";
+                    document.getElementById('record-btn').disabled = true;
+                    document.getElementById('stop-btn').disabled = false;
+                })
+                .catch(error => {
+                    console.error('Error accessing microphone:', error);
+                    document.getElementById('recording-status').innerText = "Microphone access denied.";
+                });
+        }
+    
+        function stopRecording() {
+            mediaRecorder.stop();
+            document.getElementById('record-btn').disabled = false;
+            document.getElementById('stop-btn').disabled = true;
+            document.getElementById('recording-status').innerText = "Processing the recording...";
+        }
+    </script>    
+    
+</body>
+</html>

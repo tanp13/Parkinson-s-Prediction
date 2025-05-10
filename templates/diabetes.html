@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medinova Hospital - Create Positive Change, Achieve High Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='diabetes.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container_1">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Sympton_Scan_logo.png') }}" alt="SymptomScan Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
