@@ -20,24 +20,27 @@ It uses trained models, audio processing, and clean web UI to allow users to tes
 ---
 
 ## 🗂️ Project Structure
-├── app.py                        # Flask application
-├── audio_features.py            # Extracts features from voice
-├── uploaded_audio.wav           # Sample voice file
-├── templates/                   # HTML templates for frontend
-├── static/                      # Static files (CSS/images)
-├── requirements.txt             # Python dependencies
-├── Heart_Disease.ipynb          # Heart disease model training
-├── Parkinssons_new.ipynb        # Parkinson’s disease model training
-├── best_model.pkl               # Trained model (possibly Parkinson’s)
-├── heart_model.pkl              # Final heart model
-├── heart-disease.csv            # Heart dataset
-├── parkinsons/
-│   ├── Parkinsson_disease.csv   # Parkinson’s dataset
-│   ├── best_model.joblib        # Best model for Parkinson’s
-│   ├── best_random…model.pkl  # Random forest Parkinson’s model
-│   ├── grid_search_results.joblib # Grid search results
 
----
+```text
+.
+├── app.py                         # Flask backend
+├── audio_features.py             # Voice feature extractor for Parkinson's
+├── uploaded_audio.wav            # Sample audio file
+├── templates/                    # HTML templates
+├── static/                       # CSS, images, etc.
+├── requirements.txt              # Python dependencies
+├── Heart_Disease.ipynb           # Heart disease model training notebook
+├── Parkinssons_new.ipynb         # Parkinson's model training notebook
+├── Parkinssons_new_1.ipynb       # Alternate/experimental notebook
+├── best_model.pkl                # A trained model (likely Parkinson's)
+├── heart_model.pkl               # Final model for heart disease
+├── heart-disease.csv             # Heart dataset
+├── parkinsons/
+│   ├── Parkinsson_disease.csv    # Parkinson’s dataset
+│   ├── best_model.joblib         # Best Parkinson’s model
+│   ├── best_random_forest_model.pkl  # Random Forest model
+│   ├── grid_search_results.joblib   # Grid search results
+```
 
 ## 📦 Setup Instructions
 
